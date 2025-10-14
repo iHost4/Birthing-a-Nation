@@ -23,13 +23,20 @@ function HeadOfKitchen() {
     const fetchOrders = async (e) =>{
       const { data, error } = await supabase
         .from("order")
-        .select("order_no, customer_id, customer(name)")
+        .select("order_no, customer_id, customer(name), paid_with_paypal")
         //.gt("order_date", "2025-09-15")
 
       if(error){
         console.error("Error fetching orders:", error.message)
       }else{
-        setOrders(data || [])
+        setOrders(data || []);
+
+        //CHECK PAYPAL STATUS UPON FETCHING ORDERS
+        const paypalStatus = {};
+        data.forEach(order => {
+          paypalStatus[order.order_no] = !!order.paid_with_paypal;
+        });
+        setPaidPaypal(paypalStatus);
       }
     };
     //END FETCHORDER
@@ -70,6 +77,7 @@ function HeadOfKitchen() {
               setItemsByOrder((prev) => ({...prev, [orderNo]: data}));
             }
         }
+        /*
         //CHECK IF PAID WITH PAYPAL
         if(!(orderNo in paidPaypal)){
           const { data,error } = await supabase
@@ -84,6 +92,7 @@ function HeadOfKitchen() {
             setPaidPaypal((prev) => ({...prev, [orderNo]: data && data.length > 0}))
           }
         }
+        */
         setExpandedOrders((prev) => ({...prev, [orderNo]: true}));
       }
     };

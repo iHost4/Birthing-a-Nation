@@ -177,7 +177,7 @@ function Main(){
                         image={"/IMAGES/bowl.jpg"}
                         imageAlt={''}
                         order_name={"Food item 1"}
-                        price={'$14'}
+                        price={'$.01'}
                         quantity={['0','1','2','3']}
                         onChange={handleOrderChange}
                     />
@@ -185,7 +185,7 @@ function Main(){
                         image={"/IMAGES/bowl.jpg"}
                         imageAlt={''}
                         order_name={"Food item 2"}
-                        price={'$14'}
+                        price={'$.01'}
                         quantity={['0','1','2','3']}
                         onChange={handleOrderChange}
                     />
@@ -193,7 +193,7 @@ function Main(){
                         image={"/IMAGES/bowl.jpg"}
                         imageAlt={''}
                         order_name={"Food item 3"}
-                        price={'$14'}
+                        price={'$.01'}
                         quantity={['0','1','2','3']}
                         onChange={handleOrderChange}
                     />
@@ -201,7 +201,7 @@ function Main(){
                         image={"/IMAGES/bowl.jpg"}
                         imageAlt={''}
                         order_name={"Food item 4"}
-                        price={'$14'}
+                        price={'$.01'}
                         quantity={['0','1','2','3']}
                         onChange={handleOrderChange}
                     />

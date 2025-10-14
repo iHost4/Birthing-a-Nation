@@ -6,6 +6,8 @@ import '../CSS/paypalButton.css'
 
 const PayPalCheckout = ({orderNo}) => {
     const [total, setTotal] =useState(null);
+    //success message after paypal submission
+    const [paymentSuccessful, setPaymentSuccessful] = useState(false);
 
     //UPDATE TO PAYPAL SECTION IN SUPABASE
     //FETCH ITEM TOTAL FOR PAYPAL
@@ -69,16 +71,17 @@ const PayPalCheckout = ({orderNo}) => {
                         amount: {
                             value: total.toFixed(2)
                         },
+                        //SHOW ORDER NUMBER AND NOTE FROM BATTLE AXE CAFE
+                        description: `Battle Axe Cafe Order #${orderNo}`
                         }],
                     });
                     }}
                     onApprove={async(data, actions) => {
                         const details =await actions.order.capture()
-                        //await handlePayPalSuccess()//CALLING FUNCTION TO UPDATE PAYPAL PAYMENT
-                        alert(`Transaction completed by ${details.payer.name.given_name}`);
-                        
-                        setTimeout(() => handlePayPalSuccess(),0)//CLOSE POPUP...MAYBE
-                        return Promise.resolve();
+                        await handlePayPalSuccess()//CALLING FUNCTION TO UPDATE PAYPAL PAYMENT
+                        //alert(`Transaction completed by ${details.payer.name.given_name}`);
+                        setPaymentSuccessful(true)
+                        console.log(`Transaction completed by ${details.payer.name.given_name}`);
                     }}
                     /*
                         onApprove={(data, actions) => {
@@ -89,6 +92,17 @@ const PayPalCheckout = ({orderNo}) => {
                     */
                 />
             </PayPalScriptProvider>
+             {/*MESSAGE AFTER SUCESSFUL PAYMENT*/}
+            {paymentSuccessful && (
+                <div id="paymentSuccessfulMessage">
+                    <p className="paymentSuccessfulMessage" style={{border: '1px solid white', backgroundColor: 'white', color:'green'}}>
+                        PAYPAL PAYMENT RECEIVED, THANK YOU! 
+                    </p>
+                    <button style={{border: '1px solid blue', backgroundColor: 'blue'}}>
+                        CLOSE
+                    </button>
+                </div>
+            )};
         </div>
     );
 };
