@@ -174,35 +174,27 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/bowl.jpg"}
+                        image={"/IMAGES/burger.png"}
                         imageAlt={''}
-                        order_name={"Food item 1"}
-                        price={'$.01'}
-                        quantity={['0','1','2','3']}
+                        order_name={"Cheeseburger & Fries"}
+                        price={'$12'}
+                        quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/bowl.jpg"}
+                        image={"/IMAGES/chilidog.png"}
                         imageAlt={''}
-                        order_name={"Food item 2"}
-                        price={'$.01'}
-                        quantity={['0','1','2','3']}
+                        order_name={"Chili Cheese Dog & Fries"}
+                        price={'$10'}
+                        quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/bowl.jpg"}
+                        image={"/IMAGES/chilifries.png"}
                         imageAlt={''}
-                        order_name={"Food item 3"}
-                        price={'$.01'}
-                        quantity={['0','1','2','3']}
-                        onChange={handleOrderChange}
-                    />
-                    <Items 
-                        image={"/IMAGES/bowl.jpg"}
-                        imageAlt={''}
-                        order_name={"Food item 4"}
-                        price={'$.01'}
-                        quantity={['0','1','2','3']}
+                        order_name={"Chili Cheese Fries"}
+                        price={'$7'}
+                        quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                 </div>

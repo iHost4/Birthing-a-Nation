@@ -11,8 +11,10 @@ function OrderSubmitted({orderNo, quantity, onClose}){
             <p>Your order # {orderNo}</p>
             <p>{quantity}</p>
             <button className="closeButton" onClick={onClose}>C L O S E</button>
-        
+         
+            {/* 
             <PayPalCheckout orderNo={orderNo}/>
+            */}
         </div>
     );
 };

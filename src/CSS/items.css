@@ -35,7 +35,7 @@
     border-radius: 5px;
 }
 .detailOption option{
-    background-color: yellow;
+    background-color: #BA9D55;
 }
 @media only screen and (min-width:850px) {
     #mainContent{
