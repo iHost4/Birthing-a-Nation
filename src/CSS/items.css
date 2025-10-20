@@ -9,11 +9,16 @@
     /*max-width: 350px;
     */
 }
+.imageContainer{
+    width: 200px;
+    height: 200px;
+}
 #itemImage{
     width: 100%;
-    max-width: 200px;
+    height: 100%;
     border: 1px solid;
     border-radius: 20px;
+    object-fit: cover;
 }
 .detailOption{
     display: flex;
@@ -27,6 +32,7 @@
     background-color: #ffff;
     border-radius: 5px;
     padding-right: 10px;
+    box-sizing: border-box;
 }
 .detailOption select{
     border: 1px;
@@ -36,6 +42,7 @@
 }
 .detailOption option{
     background-color: #BA9D55;
+    padding: 2px;
 }
 @media only screen and (min-width:850px) {
     #mainContent{

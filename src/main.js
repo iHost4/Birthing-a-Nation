@@ -174,26 +174,18 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/burger.png"}
+                        image={"/IMAGES/pizza.png"}
                         imageAlt={''}
-                        order_name={"Cheeseburger & Fries"}
-                        price={'$12'}
+                        order_name={"Cheese Pizza"}
+                        price={'$8'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/chilidog.png"}
+                        image={"/IMAGES/pepperoni.png"}
                         imageAlt={''}
-                        order_name={"Chili Cheese Dog & Fries"}
+                        order_name={"Pepperoni Pizza"}
                         price={'$10'}
-                        quantity={['0','1','2','3','4','5','6']}
-                        onChange={handleOrderChange}
-                    />
-                    <Items 
-                        image={"/IMAGES/chilifries.png"}
-                        imageAlt={''}
-                        order_name={"Chili Cheese Fries"}
-                        price={'$7'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />

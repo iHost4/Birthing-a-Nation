@@ -7,7 +7,9 @@ import '../CSS/items.css'
 function Items({image, imageAlt, order_name, price, quantity=[], onChange}){
     return(
         <div id="itemContainer">
-            <img id="itemImage" src={image} alt={imageAlt}></img>
+            <div className='imageContainer'>
+                <img id="itemImage" src={image} alt={imageAlt}></img>
+            </div>
             <div className='detailOption'>
                 <p>{order_name}</p>
                 <p>{price}</p>
