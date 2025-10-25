@@ -63,6 +63,36 @@ img.logo{ /*element.clssName*/
     background-color: white;
     color: red;
 }
+.sabbathWarning{
+    visibility: hidden;
+    opacity: 0;
+    color: red;
+    animation-name: warning;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#sabbath{
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.98);
+    color: yellow;
+    position: sticky;
+    bottom: 0;
+    height: 100vh;
+    align-content: center;
+    padding: 4px;
+}
+#sabbath p{
+    color: white;
+}
+@keyframes warning{
+    0%{color: red; opacity: 0; visibility: visible;}
+    25%{color: red; opacity: 1;}
+    50%{color: red; opacity: 0;}
+    75%{color: red; opacity: 1;}
+    100%{color: yellow; opacity: 0; visibility: hidden;}
+}
 @media screen and (max-width:840px) {
     hr{
         display: none;

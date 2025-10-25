@@ -22,6 +22,44 @@ function Main(){
     //STOP SUBMISSION OF ORDERS
     const [stopOrders, setStopOrders] = useState(false);
 
+    //SABBATH SITE SHUTDOWN 
+    const [isSabbath, setIsSabbath] = useState(false);
+    const [sabbathApproaching, setSabbathApproaching] = useState(false);
+    useEffect(() => {
+        const checkSabbath = () => {
+            const now = new Date();
+
+            const nowUTC = new Date();
+            const nowCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
+
+            //gets the day and hours
+            const day = nowCST.getDay();
+            const hour = nowCST.getHours();
+
+            //check if the current time is the Sabbath: Friday 7pm - Satuday 7pm
+            if(day === 5 && hour >=19 || day === 6 && hour < 19){
+                setIsSabbath(true);
+            }else{
+                setIsSabbath(false)
+            }
+            /*/Check if Sabbath is less than 12hr away
+            const approachingDay = 5;
+            const approachingHour = 7;
+            if(day === approachingDay && hour >= approachingHour && hour <= sHour){
+                setSabbathApproaching(true)
+            }else{
+                setSabbathApproaching(false)
+            }
+            */
+        };
+
+        // Run immediately, then every 30 seconds
+        checkSabbath();
+        const interval = setInterval(checkSabbath, 30 * 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+    //END SABBATH SITE SHUTDOWN
     useEffect(() =>{
         if(showPopup){
             document.body.style.setProperty('overflow', 'hidden', 'important')
@@ -138,6 +176,9 @@ function Main(){
             <hr />
             <br />
             {/*START OF FORM*/}
+            {sabbathApproaching && (
+                <p className='sabbathWarning'><b>Sabbath</b> is less than <i>12hrs</i> away, purchase quickly!</p>
+            )}
             <form id='userForm' onSubmit={handleSubmit}>
                 {/*<label htmlFor="genderRank"><strong>Rank (or select Sister):</strong></label><br />*/}
                 <select required id="genderRank" name="genderRank" value={rank} onChange={(e) => setRank(e.target.value)}>
@@ -204,7 +245,21 @@ function Main(){
             )}
             {/* END OF FORM*/}
             <br/>
-        </div>
+            {/*SABBATH DIV*/}
+            {isSabbath && (
+                <div id='sabbath'>
+                <h2>SHALOM, MHNCB AND </h2>
+                    <h1><u>HAPPY SABBATH!</u></h1>
+                    <p>
+                        THE WEBSITE IS SHUTDOWN IN OBSERVATION OF THE LORD'S &nbsp;
+                        <b>SABBATH DAY</b>
+                    </p>
+                    <p>
+                        Please check back later Saturday after sundown!
+                    </p>
+                </div>
+            )}
+        </div> 
     );
 }
 export default Main;
