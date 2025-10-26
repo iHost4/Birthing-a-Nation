@@ -24,7 +24,7 @@ function Main(){
 
     //SABBATH SITE SHUTDOWN 
     const [isSabbath, setIsSabbath] = useState(false);
-    const [sabbathApproaching, setSabbathApproaching] = useState(false);
+    const [noMoreOrders, setNoMoreOrders] = useState(false);
     useEffect(() => {
         const checkSabbath = () => {
             const now = new Date();
@@ -35,22 +35,22 @@ function Main(){
             //gets the day and hours
             const day = nowCST.getDay();
             const hour = nowCST.getHours();
+            const minute = nowCST.getMinutes();
 
             //check if the current time is the Sabbath: Friday 7pm - Satuday 7pm
-            if(day === 5 && hour >=19 || day === 6 && hour < 19){
+            if(day === 5 && hour >= 19 || day === 6 && hour < 19){
                 setIsSabbath(true);
             }else{
-                setIsSabbath(false)
+                setIsSabbath(false);
             }
-            /*/Check if Sabbath is less than 12hr away
-            const approachingDay = 5;
-            const approachingHour = 7;
-            if(day === approachingDay && hour >= approachingHour && hour <= sHour){
-                setSabbathApproaching(true)
+            //check if the current time is 12pm Friday (this is when orders are no longer being received)
+            if(day === 5 && hour >= 12 && minute >= 0 || day === 5 && hour <= 18 && minute >= 0){
+                setNoMoreOrders(true);
             }else{
-                setSabbathApproaching(false)
+                setNoMoreOrders(false);
             }
-            */
+            
+                
         };
 
         // Run immediately, then every 30 seconds
@@ -176,9 +176,6 @@ function Main(){
             <hr />
             <br />
             {/*START OF FORM*/}
-            {sabbathApproaching && (
-                <p className='sabbathWarning'><b>Sabbath</b> is less than <i>12hrs</i> away, purchase quickly!</p>
-            )}
             <form id='userForm' onSubmit={handleSubmit}>
                 {/*<label htmlFor="genderRank"><strong>Rank (or select Sister):</strong></label><br />*/}
                 <select required id="genderRank" name="genderRank" value={rank} onChange={(e) => setRank(e.target.value)}>
@@ -257,6 +254,13 @@ function Main(){
                     <p>
                         Please check back later Saturday after sundown!
                     </p>
+                </div>
+            )}
+
+            {noMoreOrders && (
+                <div id='noMoreOrders'>
+                    <h1>THE KITCHEN IS NO LONGER ACCEPTING ORDERS!</h1>
+                    <h3>Visit us again for next week's specials.</h3>
                 </div>
             )}
         </div> 
