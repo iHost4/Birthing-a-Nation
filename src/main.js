@@ -181,7 +181,7 @@ function Main(){
             <br />
             <div className='sideBar'>
                 <input type='button' onClick={closeOrderPopUp} value="X" />
-                <h3>Poll close every <i>Friday</i> at <i>12pm CST</i></h3>
+                <h3>poll closes every <i>Friday</i> at <i>12pm CST</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
