@@ -3,21 +3,24 @@
     flex-direction: column;
     min-height: 100vh;
 }
-
+:root{
+    --bg: #BA9D55;
+    --secondary: #5A2917;
+}
 html{
     height: 100%;
     margin: 0;
 }
 
 body{
-    background-color: #BA9D55;
+    background-color: var(--bg);
     text-align: center;
 }
 img.logo{ /*element.clssName*/
     width: 25%;
 }
 #mainContent hr{
-    color: #5A2917;
+    color: var(--secondary);
 }
 #mainContent{
     text-align: center;
@@ -41,7 +44,7 @@ img.logo{ /*element.clssName*/
 .showOrderNoButton{
     display: none;
     border: 1px;
-    background-color: #5A2917;
+    background-color: var(--secondary);
     color: white;
     height: 25px;
     align-items: center;
@@ -99,6 +102,28 @@ img.logo{ /*element.clssName*/
 #noMoreOrders h3{
     color: white;
     text-decoration: none;
+}
+.sideBar{
+    position: fixed;
+    width: 40vw;
+    border: 1px solid var(--secondary);
+    background-color: #5a2917dc;
+    color: white;
+    margin-left: 10px;
+}
+.sideBar h3{
+    text-decoration: none;
+}
+.sideBar i{
+    color: var(--bg);
+}
+.sideBar input{
+    border: 1px solid #5a291700;
+    background-color: #5a291700;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-size: large;
 }
 @keyframes warning{
     0%{color: red; opacity: 0; visibility: visible;}

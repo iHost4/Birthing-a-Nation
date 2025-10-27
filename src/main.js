@@ -164,6 +164,10 @@ function Main(){
         showOrderNoButton.style.justifyContent="center"
     }
     //END OF: FORM SUBMISSION HANDLING
+    function closeOrderPopUp(){
+        const sideBar = document.querySelector('.sideBar');
+        sideBar.style.display= 'none';
+    }
    // const navigate = useNavigate();
     return(
         <div id="mainContent">
@@ -175,6 +179,10 @@ function Main(){
             <br />
             <hr />
             <br />
+            <div className='sideBar'>
+                <input type='button' onClick={closeOrderPopUp} value="X" />
+                <h3>Poll close every <i>Friday</i> at <i>12pm CST</i></h3>
+            </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
                 {/*<label htmlFor="genderRank"><strong>Rank (or select Sister):</strong></label><br />*/}
@@ -212,18 +220,10 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/pizza.png"}
+                        image={"/IMAGES/Lasagnasoup.jpeg"}
                         imageAlt={''}
-                        order_name={"Cheese Pizza"}
-                        price={'$8'}
-                        quantity={['0','1','2','3','4','5','6']}
-                        onChange={handleOrderChange}
-                    />
-                    <Items 
-                        image={"/IMAGES/pepperoni.png"}
-                        imageAlt={''}
-                        order_name={"Pepperoni Pizza"}
-                        price={'$10'}
+                        order_name={"Lasagna Soup"}
+                        price={'$12'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
