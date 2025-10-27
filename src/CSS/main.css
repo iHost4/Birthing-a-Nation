@@ -106,7 +106,6 @@ img.logo{ /*element.clssName*/
 .sideBar{
     position: fixed;
     width: 40vw;
-    height: 100px;
     box-sizing: border-box;
     border: 1px solid var(--secondary);
     background-color: #5a2917dc;
