@@ -5,7 +5,8 @@
 }
 :root{
     --bg: #BA9D55;
-    --secondary: #5A2917;
+    --secondary: #68301c;
+    --tertiary: #c4903c;
 }
 html{
     height: 100%;
@@ -17,7 +18,7 @@ body{
     text-align: center;
 }
 img.logo{ /*element.clssName*/
-    width: 25%;
+    width: 20%;
 }
 #mainContent hr{
     color: var(--secondary);
@@ -66,16 +67,6 @@ img.logo{ /*element.clssName*/
     background-color: white;
     color: red;
 }
-.sabbathWarning{
-    visibility: hidden;
-    opacity: 0;
-    color: red;
-    animation-name: warning;
-    animation-duration: 15s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
 #sabbath{
     border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.98);
@@ -105,29 +96,38 @@ img.logo{ /*element.clssName*/
 }
 .sideBar{
     position: fixed;
-    width: 40vw;
     box-sizing: border-box;
+    top: 300px;
     border: 1px solid var(--secondary);
-    background-color: #5a2917dc;
-    color: white;
+    background-color: var(--tertiary);
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .sideBar h3{
     text-decoration: none;
+    color: black;
+    text-align: left;
+    margin: 0;
+    padding: 10px;
 }
 .sideBar i{
-    color: var(--bg);
+    color: crimson;
 }
 .sideBar input{
-    border: 1px solid #5a291700;
-    background-color: #5a291700;
-    color: white;
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--bg);
     cursor: pointer;
-    position: relative;
     font-size: large;
+    width: 30px;
+    font-weight: bold;
+    margin: 2px;
 }
 .sideBar input:hover{
     color: red;
+    background-color: white;
 }
 @keyframes warning{
     0%{color: red; opacity: 0; visibility: visible;}
@@ -136,8 +136,16 @@ img.logo{ /*element.clssName*/
     75%{color: red; opacity: 1;}
     100%{color: yellow; opacity: 0; visibility: hidden;}
 }
+/*MOBILE ONLY STYLING*/
 @media screen and (max-width:840px) {
     hr{
         display: none;
     }
+    .sideBar{
+        width: 40vw;
+    }
+}
+/*DESKTOP ONLY STYLING*/
+@media screen and (min-width: 840px) {
+    
 }
