@@ -222,7 +222,7 @@ function Main(){
                     <Items 
                         image={"/IMAGES/Lasagnasoup.jpeg"}
                         imageAlt={''}
-                        order_name={"Lasagna Soup"}
+                        order_name={"LASAGNA SOUP with Garlic Cheese Toast & a Drink"}
                         price={'$12'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}

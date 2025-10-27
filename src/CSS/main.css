@@ -129,6 +129,17 @@ img.logo{ /*element.clssName*/
     color: red;
     background-color: white;
 }
+.submitOrderButton{
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+.submitOrderButton:hover{
+    background-color: white;
+    color: green;
+}
 @keyframes warning{
     0%{color: red; opacity: 0; visibility: visible;}
     25%{color: red; opacity: 1;}
