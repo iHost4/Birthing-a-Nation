@@ -44,7 +44,7 @@ function Main(){
                 setIsSabbath(false);
             }
             //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 5 && hour >= 12 && minute >= 0 || day === 5 && hour <= 18 && minute >= 0){
+            if(day === 5 && hour >= 12 && minute >= 0 && day === 5 && hour <= 18 && minute >= 59){
                 setNoMoreOrders(true);
             }else{
                 setNoMoreOrders(false);
