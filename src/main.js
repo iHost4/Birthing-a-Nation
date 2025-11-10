@@ -220,9 +220,18 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/Lasagnasoup.jpeg"}
+                        image={"/IMAGES/Tacos.jpeg"}
                         imageAlt={''}
-                        order_name={"LASAGNA SOUP with Garlic Cheese Toast & a Drink"}
+                        order_name={"REGULAR Shell Beef Taco & a Drink"}
+                        price={'$12'}
+                        quantity={['0','1','2','3','4','5','6']}
+                        onChange={handleOrderChange}
+                    />
+                    
+                    <Items 
+                        image={"/IMAGES/Tacos.jpeg"}
+                        imageAlt={''}
+                        order_name={"HARD Shell Beef Taco & a Drink"}
                         price={'$12'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
