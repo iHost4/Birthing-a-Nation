@@ -23,7 +23,7 @@ function HeadOfKitchen() {
     const fetchOrders = async (e) =>{
       const { data, error } = await supabase
         .from("order")
-        .select("order_no, customer_id, customer(name), paid_with_paypal")
+        .select(`order_no, customer_id, customer(rank, name), paid_with_paypal`)
         .gt("order_date", "2025-11-10")//MUST UPDATE WEEKLY: ensures that only this week's orders are fetched
 
       if(error){
@@ -31,6 +31,7 @@ function HeadOfKitchen() {
       }else{
         setOrders(data || []);
 
+      //CHANGE RANKS
         //CHECK PAYPAL STATUS UPON FETCHING ORDERS
         const paypalStatus = {};
         data.forEach(order => {
@@ -123,7 +124,7 @@ function HeadOfKitchen() {
               <React.Fragment key={order.order_no}>
                 <tr style={{ color: paidPaypal[order.order_no] ? 'green' : 'black' }}>
                   <td>{order.order_no}</td>
-                  <td>{order.customer?.name || "Unknown"}</td>
+                  <td><i style={{color: '#636363'}}>{order.customer?.rank }</i>&nbsp;{order.customer?.name || "Unknown"}</td>
                   <td>
                     <button className="viewOrdersButton" onClick={() => toggleItems(order.order_no)}style={{ backgroundColor: paidPaypal[order.order_no] ? 'green' : '#BA9D55', color: paidPaypal[order.order_no] ? 'white' : 'black' }}>
                       {expandedOrders[order.order_no]
