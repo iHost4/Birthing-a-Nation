@@ -1,6 +1,4 @@
 import '../CSS/footer.css'
-//import React from 'react';
-//import ReactDOM from 'react-dom/client'; THIS IS POSSIBLY CAUSING AN ISSUE WITH VERCEL... BUT WHY NOW?
 import { useNavigate } from 'react-router-dom';
 
 function Footer() {

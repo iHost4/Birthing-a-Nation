@@ -220,7 +220,7 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/Tacos.jpeg"}
+                        image={"/IMAGES/Tacos.JPEG"}
                         imageAlt={''}
                         order_name={"REGULAR Shell Beef Taco & a Drink"}
                         price={'$12'}
@@ -229,7 +229,7 @@ function Main(){
                     />
                     
                     <Items 
-                        image={"/IMAGES/Tacos.jpeg"}
+                        image={"/IMAGES/Tacos.JPEG"}
                         imageAlt={''}
                         order_name={"HARD Shell Beef Taco & a Drink"}
                         price={'$12'}
