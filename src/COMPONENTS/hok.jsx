@@ -24,7 +24,7 @@ function HeadOfKitchen() {
       const { data, error } = await supabase
         .from("order")
         .select(`order_no, customer_id, customer(rank, name), paid_with_paypal`)
-        .gt("order_date", "2025-11-10")//MUST UPDATE WEEKLY: ensures that only this week's orders are fetched
+        .gt("order_date", "2025-11-17")//MUST UPDATE WEEKLY: ensures that only this week's orders are fetched
 
       if(error){
         console.error("Error fetching orders:", error.message)

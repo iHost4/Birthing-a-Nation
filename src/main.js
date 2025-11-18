@@ -22,7 +22,7 @@ function Main(){
     //STOP SUBMISSION OF ORDERS
     const [stopOrders, setStopOrders] = useState(false);
 
-    //SABBATH SITE SHUTDOWN 
+    //SABBATH SITE SHUTDOWN
     const [isSabbath, setIsSabbath] = useState(false);
     const [noMoreOrders, setNoMoreOrders] = useState(false);
     useEffect(() => {
@@ -37,8 +37,8 @@ function Main(){
             const hour = nowCST.getHours();
             const minute = nowCST.getMinutes();
 
-            //check if the current time is the Sabbath: Friday 7pm - Satuday 7pm
-            if(day === 5 && hour >= 19 || day === 6 && hour < 19){
+            //check if the current time is the Sabbath: Friday 6pm - Satuday 6pm
+            if(day === 5 && hour >= 18 || day === 6 && hour < 18){
                 setIsSabbath(true);
             }else{
                 setIsSabbath(false);
@@ -49,8 +49,6 @@ function Main(){
             }else{
                 setNoMoreOrders(false);
             }
-            
-                
         };
 
         // Run immediately, then every 30 seconds
@@ -220,18 +218,9 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/Tacos.JPEG"}
+                        image={"/IMAGES/Chicken_Birria.JPEG"}
                         imageAlt={''}
-                        order_name={"REGULAR Shell Beef Taco & a Drink"}
-                        price={'$12'}
-                        quantity={['0','1','2','3','4','5','6']}
-                        onChange={handleOrderChange}
-                    />
-                    
-                    <Items 
-                        image={"/IMAGES/Tacos.JPEG"}
-                        imageAlt={''}
-                        order_name={"HARD Shell Beef Taco & a Drink"}
+                        order_name={"Chicken Birria: Mexican Corn, Refried Beans & a Drink"}
                         price={'$12'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
