@@ -218,7 +218,7 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/Chicken_Birria.JPEG"}
+                        image={"/IMAGES/Chicken_Birria.jpeg"}
                         imageAlt={''}
                         order_name={"Chicken Birria: Mexican Corn, Refried Beans & a Drink"}
                         price={'$12'}
