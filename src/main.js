@@ -218,18 +218,18 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/FISHSPAGHETTI.jpeg"}
+                        image={"/IMAGES/brisket sandwich.jpg"}
                         imageAlt={''}
-                        order_name={"FISH PLATE SPAGHETTI: includes white beans, slaw, drink"}
-                        price={'$15'}
+                        order_name={"BBQ Brisket Sandwich: includes potato salad, baked breans, drink"}
+                        price={'$13'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/FISHSANDWICH.jpeg"}
+                        image={"/IMAGES/chicken sandwich.jpg"}
                         imageAlt={''}
-                        order_name={"FISH SANDWICH: includes drink"}
-                        price={'$10'}
+                        order_name={"BBQ Chicken Sandwich: includes potato salad, baked breans, drink"}
+                        price={'$11'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
