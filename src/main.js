@@ -218,10 +218,19 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/nacho_supreme.png"}
+                        image={"/IMAGES/bacon_cheeseburger.png"}
                         imageAlt={''}
-                        order_name={"CHICKEN and BEEF NACHO SUPREME: comes with a drink"}
+                        order_name={"BACON CHEESEBURGER: Includes Cajun Fries and Drink"}
                         price={'$13'}
+                        quantity={['0','1','2','3','4','5','6']}
+                        onChange={handleOrderChange}
+                    />
+                    
+                    <Items 
+                        image={"/IMAGES/regular_cheeseburger.png"}
+                        imageAlt={''}
+                        order_name={"REGULAR CHEESEBURGER: Includes Cajun Fries and Drink"}
+                        price={'$12'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
