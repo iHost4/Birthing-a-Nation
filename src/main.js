@@ -218,19 +218,19 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/bacon_cheeseburger.png"}
+                        image={"/IMAGES/chicken_gold.jpg"}
                         imageAlt={''}
-                        order_name={"BACON CHEESEBURGER: Includes Cajun Fries and Drink"}
+                        order_name={"BIG BUBBA CAROLINA GOLD: Includes Sweet potatoe Fries and Drink"}
                         price={'$13'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     
                     <Items 
-                        image={"/IMAGES/regular_cheeseburger.png"}
+                        image={"/IMAGES/chicken_spicy.jpg"}
                         imageAlt={''}
-                        order_name={"REGULAR CHEESEBURGER: Includes Cajun Fries and Drink"}
-                        price={'$12'}
+                        order_name={"BIG BUBBA STICKY HONEY GARLIC: Includes Sweet potatoe Fries and Drink"}
+                        price={'$13'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
