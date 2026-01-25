@@ -218,18 +218,9 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/chicken_gold.jpg"}
+                        image={"/IMAGES/fajita.png"}
                         imageAlt={''}
-                        order_name={"BIG BUBBA CAROLINA GOLD: Includes Sweet potatoe Fries and Drink"}
-                        price={'$13'}
-                        quantity={['0','1','2','3','4','5','6']}
-                        onChange={handleOrderChange}
-                    />
-                    
-                    <Items 
-                        image={"/IMAGES/chicken_spicy.jpg"}
-                        imageAlt={''}
-                        order_name={"BIG BUBBA STICKY HONEY GARLIC: Includes Sweet potatoe Fries and Drink"}
+                        order_name={"CHICKEN FAJITAS TACOS: Includes Mexican Corn Black Beans and a Drink"}
                         price={'$13'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
