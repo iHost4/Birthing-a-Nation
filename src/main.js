@@ -218,9 +218,9 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/fajita.png"}
+                        image={"/IMAGES/brisket.png"}
                         imageAlt={''}
-                        order_name={"CHICKEN FAJITAS TACOS: Includes Mexican Corn Black Beans and a Drink"}
+                        order_name={"BRISKET NACHOS: includes a Drink"}
                         price={'$13'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
