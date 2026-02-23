@@ -226,9 +226,9 @@ function Main(){
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/hotdogS.jpg"}
+                        image={"/IMAGES/hotdogs.jpg"}
                         imageAlt={''}
-                        order_name={"HOTDOGS: Includes a Drink"}
+                        order_name={"HOTDOG: Includes a Drink"}
                         price={'$14'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
