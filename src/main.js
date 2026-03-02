@@ -225,6 +225,14 @@ function Main(){
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
+                    <Items 
+                        image={"/IMAGES/hotdogs.jpg"}
+                        imageAlt={''}
+                        order_name={"HOT DOG: Includes Chips and a Drink"}
+                        price={'$6'}
+                        quantity={['0','1','2','3','4','5','6']}
+                        onChange={handleOrderChange}
+                    />
                 </div>
                 <input className='submitOrderButton' type="submit" value="Place Order" disabled={stopOrders}/>
             </form>
