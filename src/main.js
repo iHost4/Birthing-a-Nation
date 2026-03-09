@@ -218,10 +218,10 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/philly_joe.png"}
+                        image={"/IMAGES/bbq_chili.png"}
                         imageAlt={''}
-                        order_name={"PHILLY STEAK SLOPPY JOE: Includes Onion rings and a Drink"}
-                        price={'$13'}
+                        order_name={"BBQ CHICKEN CHEESE FRIES: Includes a Drink"}
+                        price={'$14'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
