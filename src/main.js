@@ -44,7 +44,7 @@ function Main(){
                 setIsSabbath(false);
             }
             //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 5 && hour >= 12 && minute >= 0 && day === 5){
+            if(day === 4 && hour >= 12 && minute >= 0 && day === 4){ //CHANGE BACK TO 5
                 setNoMoreOrders(true);
             }else{
                 setNoMoreOrders(false);
@@ -185,7 +185,7 @@ function Main(){
                         FIRST COME FIRST SERVE <br/><br/>DON'T DELAY
                     </h4>
                 </div>
-                <h3>poll closes: <i>Friday, 12pm CST</i></h3>
+                <h3>Kitchen Closes: <i>Thursday, 12pm CST</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
