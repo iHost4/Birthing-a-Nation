@@ -179,6 +179,12 @@ function Main(){
             <br />
             <div className='sideBar'>
                 <input type='button' onClick={closeOrderPopUp} value="X" />
+                <div className='limited_order'>
+                    <h3>ATTENTION:</h3>
+                    <h4>WE ONLY HAVE 25 STEAKS THIS WEEK. <br/>
+                        FIRST COME FIRST SERVE <br/><br/>DON'T DELAY
+                    </h4>
+                </div>
                 <h3>poll closes: <i>Friday, 12pm CST</i></h3>
             </div>
             {/*START OF FORM*/}
@@ -218,10 +224,10 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/maple_bacon.jpg"}
+                        image={"/IMAGES/steak_caesar.jpg"}
                         imageAlt={''}
-                        order_name={"MAPLE BACON SMASH BURGER: Includes Fries and a Drink"}
-                        price={'$14'}
+                        order_name={"STEAK CAESAR SALAD: Includes Garlic Rolls and a Drink"}
+                        price={'$20'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
