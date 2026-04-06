@@ -44,7 +44,7 @@ function Main(){
                 setIsSabbath(false);
             }
             //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 4 && hour >= 12 && minute >= 0 && day === 4){ //CHANGE BACK TO 5
+            if(day === 5 && hour >= 12 && minute >= 0 && day === 5){
                 setNoMoreOrders(true);
             }else{
                 setNoMoreOrders(false);
@@ -179,13 +179,14 @@ function Main(){
             <br />
             <div className='sideBar'>
                 <input type='button' onClick={closeOrderPopUp} value="X" />
-                <div className='limited_order'>
+                {/*<div className='limited_order'>
                     <h3>ATTENTION:</h3>
                     <h4>WE ONLY HAVE 25 STEAKS THIS WEEK. <br/>
                         FIRST COME FIRST SERVE <br/><br/>DON'T DELAY
                     </h4>
                 </div>
-                <h3>Kitchen Closes: <i>Thursday, 12pm CST</i></h3>
+                */}
+                <h3>Kitchen Closes: <i>Friday, 12pm CST</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
@@ -224,10 +225,10 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/steak_caesar.jpg"}
+                        image={"/IMAGES/fish_taco.jpg"}
                         imageAlt={''}
-                        order_name={"STEAK CAESAR SALAD: Includes Garlic Rolls and a Drink"}
-                        price={'$20'}
+                        order_name={"3 FISH TACOS: Topped with Corn, Black Bean, and Pico de Gallo. Includes a Drink"}
+                        price={'$14'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
@@ -236,6 +237,14 @@ function Main(){
                         imageAlt={''}
                         order_name={"HOT DOG: Includes Chips and a Drink"}
                         price={'$6'}
+                        quantity={['0','1','2','3','4','5','6']}
+                        onChange={handleOrderChange}
+                    />
+                    <Items 
+                        image={"/IMAGES/chilidog.png"}
+                        imageAlt={''}
+                        order_name={"CHILI  DOG: Includes Chips and a Drink"}
+                        price={'$8'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
