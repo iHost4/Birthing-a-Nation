@@ -183,7 +183,7 @@ function Main(){
                     <h3>ATTENTION:</h3>
                 </div>
                 
-                <h3>Kitchen Closes: <i>Thursday, 12pm CST</i></h3>
+                <h3>Kitchen Closes: <i>Thursday @12pm CST</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
