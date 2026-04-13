@@ -129,15 +129,15 @@ img.logo{ /*element.clssName*/
     color: red;
     background-color: white;
 }
-.limited_order{
+.attention_{
     font-weight: bolder;
     text-align: left;
 }
-.limited_order h3{
+.attention_ h3{
     color: red;
     text-shadow: .5px 1px black;
 }
-.limited_order h4{
+.attention_ h4{
     margin-left: 6px;
     text-shadow: .5px .25px brown;
 }

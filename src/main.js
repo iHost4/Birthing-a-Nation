@@ -38,13 +38,13 @@ function Main(){
             const minute = nowCST.getMinutes();
 
             //check if the current time is the Sabbath: Friday 6pm - Satuday 6pm
-            if(day === 5 && hour >= 18 || day === 6 && hour < 18){
+            if(day === 5 && hour >= 19 || day === 6 && hour < 19){ //CHANGE ACCORDING TO DLS
                 setIsSabbath(true);
             }else{
                 setIsSabbath(false);
             }
             //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 5 && hour >= 12 && minute >= 0 && day === 5){
+            if(day === 4 && hour >= 12 && minute >= 0 && day === 4){ //CHANGE bay BACK TO 5
                 setNoMoreOrders(true);
             }else{
                 setNoMoreOrders(false);
@@ -179,14 +179,11 @@ function Main(){
             <br />
             <div className='sideBar'>
                 <input type='button' onClick={closeOrderPopUp} value="X" />
-                {/*<div className='limited_order'>
+                <div className='attention_'>
                     <h3>ATTENTION:</h3>
-                    <h4>WE ONLY HAVE 25 STEAKS THIS WEEK. <br/>
-                        FIRST COME FIRST SERVE <br/><br/>DON'T DELAY
-                    </h4>
                 </div>
-                */}
-                <h3>Kitchen Closes: <i>Friday, 12pm CST</i></h3>
+                
+                <h3>Kitchen Closes: <i>Thursday, 12pm CST</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
@@ -225,13 +222,14 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/fish_taco.jpg"}
+                        image={"/IMAGES/bourbon_chicken.jpeg"}
                         imageAlt={''}
-                        order_name={"3 FISH TACOS: Topped with Corn, Black Bean, and Pico de Gallo. Includes a Drink"}
+                        order_name={"BOURBON CHICKEN and BROWN RICE: Includes Caesar Salad and a Drink"}
                         price={'$14'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
+                    {/*
                     <Items 
                         image={"/IMAGES/hotdogs.jpg"}
                         imageAlt={''}
@@ -248,6 +246,7 @@ function Main(){
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
+                    */}
                 </div>
                 <input className='submitOrderButton' type="submit" value="Place Order" disabled={stopOrders}/>
             </form>
