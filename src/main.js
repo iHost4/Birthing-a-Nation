@@ -44,7 +44,7 @@ function Main(){
                 setIsSabbath(false);
             }
             //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 4 && hour >= 12 && minute >= 0 && day === 4){ //CHANGE bay BACK TO 5
+            if(day === 3 && hour >= 20 && minute >= 0 && day === 3){ //CHANGE bay BACK TO 5
                 setNoMoreOrders(true);
             }else{
                 setNoMoreOrders(false);
@@ -183,7 +183,7 @@ function Main(){
                     <h3>ATTENTION:</h3>
                 </div>
                 
-                <h3>Kitchen Closes: <i>Thursday @12pm CST</i></h3>
+                <h3>Kitchen Closes: <i>Wednesday @7pm CST then reopen Thursday night briefly</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
@@ -222,9 +222,9 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/bourbon_chicken.jpeg"}
+                        image={"/IMAGES/carne_asada.png"}
                         imageAlt={''}
-                        order_name={"BOURBON CHICKEN and BROWN RICE: Includes Caesar Salad and a Drink"}
+                        order_name={"CARNE ASADA NACHOS: Includes a Drink"}
                         price={'$14'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
