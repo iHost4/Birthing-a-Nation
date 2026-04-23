@@ -279,7 +279,7 @@ function Main(){
 
             {noMoreOrders && (
                 <div id='noMoreOrders'>
-                    <h1>HAPPY PASSOVER CLOSING: THE KITCHEN IS NO LONGER ACCEPTING ORDERS!</h1>
+                    <h1>HAPPY PASSOVER CLOSING: <br/>THE KITCHEN IS NO LONGER ACCEPTING ORDERS!</h1>
                     <h3>We will reopen tonight.</h3>
                 </div>
             )}
