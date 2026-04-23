@@ -44,10 +44,10 @@ function Main(){
                 setIsSabbath(false);
             }
             //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 3 && hour >= 20 && minute >= 0 && day === 3){ //CHANGE bay BACK TO 5
+            if(day === 3 && hour >= 20 || day === 4 && hour <20 && minute <=10){ //CHANGE bay BACK TO 5
                 setNoMoreOrders(true);
             }else{
-                setNoMoreOrders(false);
+                setNoMoreOrders(true);
             }
         };
 
@@ -279,8 +279,8 @@ function Main(){
 
             {noMoreOrders && (
                 <div id='noMoreOrders'>
-                    <h1>THE KITCHEN IS NO LONGER ACCEPTING ORDERS!</h1>
-                    <h3>Visit us again for next week's specials.</h3>
+                    <h1>HAPPY PASSOVER CLOSING: THE KITCHEN IS NO LONGER ACCEPTING ORDERS!</h1>
+                    <h3>We will reopen tonight.</h3>
                 </div>
             )}
         </div> 
