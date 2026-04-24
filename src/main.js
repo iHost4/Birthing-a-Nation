@@ -32,7 +32,7 @@ function Main(){
             const nowUTC = new Date();
             const nowCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
 
-            //gets the day and hours
+            //gets the day hour and minute
             const day = nowCST.getDay();
             const hour = nowCST.getHours();
             const minute = nowCST.getMinutes();
@@ -44,10 +44,10 @@ function Main(){
                 setIsSabbath(false);
             }
             //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 3 && hour >= 20 || day === 4 && hour <20 && minute <=10){ //CHANGE bay BACK TO 5
+            if(day === 5 && hour >= 12){
                 setNoMoreOrders(true);
             }else{
-                setNoMoreOrders(true);
+                setNoMoreOrders(false);
             }
         };
 
@@ -183,7 +183,7 @@ function Main(){
                     <h3>ATTENTION:</h3>
                 </div>
                 
-                <h3>Kitchen Closes: <i>Wednesday @7pm CST then reopen Thursday night briefly</i></h3>
+                <h3>Kitchen Closes: <i>Friday @12pm CST!</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>
@@ -279,8 +279,8 @@ function Main(){
 
             {noMoreOrders && (
                 <div id='noMoreOrders'>
-                    <h1>HAPPY PASSOVER CLOSING: <br/>THE KITCHEN IS NO LONGER ACCEPTING ORDERS!</h1>
-                    <h3>We will reopen tonight.</h3>
+                    <h1>THE KITCHEN IS NO LONGER ACCEPTING ORDERS!</h1>
+                    <h3>Visit us again for next week's special.</h3>
                 </div>
             )}
         </div> 
