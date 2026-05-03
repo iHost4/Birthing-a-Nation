@@ -222,10 +222,10 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/lasagna.jpg"}
+                        image={"/IMAGES/buffalo_chicken.jpg"}
                         imageAlt={''}
-                        order_name={"LASAGNA WITH MIXED VEGETABLES: Includes a Side Salad, Garlic Bread, and a Drink"}
-                        price={'$14'}
+                        order_name={"BUFFALO CHICKEN SUB SANDWICH: Includes Broccoli Pasta Salad and a Drink"}
+                        price={'$12'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
