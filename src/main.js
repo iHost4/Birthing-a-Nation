@@ -222,31 +222,31 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/big_mac_slider.jpg"}
+                        image={"/IMAGES/lo_mein.jpg"}
                         imageAlt={''}
-                        order_name={"BIG MAC SLIDERS: Includes Fries and a Drink"}
+                        order_name={"CHICKEN LO MEIN: Includes a Drink"}
                         price={'$13'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
-                    {/*
+        
                     <Items 
                         image={"/IMAGES/hotdogs.jpg"}
                         imageAlt={''}
-                        order_name={"HOT DOG: Includes Chips and a Drink"}
+                        order_name={"HOT DOG: Includes a Drink"}
                         price={'$6'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/chilidog.png"}
+                        image={"/IMAGES/soda.jpg"}
                         imageAlt={''}
-                        order_name={"CHILI  DOG: Includes Chips and a Drink"}
-                        price={'$8'}
+                        order_name={"Drink"}
+                        price={'$2'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
-                    */}
+                    
                 </div>
                 <input className='submitOrderButton' type="submit" value="Place Order" disabled={stopOrders}/>
             </form>
