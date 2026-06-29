@@ -222,14 +222,29 @@ function Main(){
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/parmesan_garlic.png"}
+                        image={"/IMAGES/buffalo_chicken_pizza.jpg"}
                         imageAlt={''}
-                        order_name={"PARMESAN GARLIC CHICKEN SLIDERS: Includes Fries and a Drink"}
-                        price={'$13'}
+                        order_name={"BUFFALO CHICKEN PIZZA: Includes a Drink"}
+                        price={'$10'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
-                    {/*
+                    <Items 
+                        image={"/IMAGES/pepperoni_pizza.jpg"}
+                        imageAlt={''}
+                        order_name={"PEPPERONI PIZZA: Includes a Drink"}
+                        price={'$9'}
+                        quantity={['0','1','2','3','4','5','6']}
+                        onChange={handleOrderChange}
+                    />
+                    <Items 
+                        image={"/IMAGES/cheese_pizza.jpg"}
+                        imageAlt={''}
+                        order_name={"CHEESE PIZZA: Includes a Drink"}
+                        price={'$7'}
+                        quantity={['0','1','2','3','4','5','6']}
+                        onChange={handleOrderChange}
+                    />
                     <Items 
                         image={"/IMAGES/hotdogs.jpg"}
                         imageAlt={''}
@@ -238,15 +253,6 @@ function Main(){
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
-                    <Items 
-                        image={"/IMAGES/soda.jpg"}
-                        imageAlt={''}
-                        order_name={"Drink"}
-                        price={'$2'}
-                        quantity={['0','1','2','3','4','5','6']}
-                        onChange={handleOrderChange}
-                    />
-                    */}
                 </div>
                 <input className='submitOrderButton' type="submit" value="Place Order" disabled={stopOrders}/>
             </form>
