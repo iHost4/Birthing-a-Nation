@@ -1,0 +1,58 @@
+img.hoklogo{
+    width: 25%;
+} 
+.hr{
+    width: 80%;
+    color: #5A2917;
+}
+h3{
+    text-decoration: underline;
+}
+.hokForm{
+    border: 1px solid white;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+}
+#viewOrder{
+    margin: 5px auto 0;
+    width: 100vw;
+    height: auto;
+}
+.orderTable{
+    margin: auto;
+    border: 1px dotted #BA9D55;
+    background-color:white;
+    padding: 5px;
+}
+.orderTable th, .orderTable td{
+    border: 1px solid #BA9D55;
+    padding: 5px;
+}
+.viewOrdersButton{
+    border: 1px solid rgba(0, 0, 255, 0);
+    /*background-color: #BA9D55;*/
+}
+.item{
+    list-style: none;
+    color: rgb(41, 41, 41);
+}
+/*FOR THE BIG SCREEN*/
+@media screen and (min-width:840px) {
+    img.logo{
+        max-width: 15%;
+    }img.hoklogo{
+    width: 12%;
+} 
+}
+/*FOR THE LITTLE SCREEN*/
+@media screen and (max-width:840px) {
+    #viewOrder{
+        width: 80vw;
+    }
+    hr{
+        display: none;
+    }
+}
