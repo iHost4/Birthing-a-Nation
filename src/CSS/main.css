@@ -4,9 +4,9 @@
     min-height: 100vh;
 }
 :root{
-    --bg: #BA9D55;
-    --secondary: #68301c;
-    --tertiary: #c4903c;
+    --bg: #b0066f;
+    --secondary: #ffff00;
+    --tertiary: #0292ab;
 }
 html{
     height: 100%;
@@ -23,9 +23,18 @@ img.logo{ /*element.clssName*/
 #mainContent hr{
     color: var(--secondary);
 }
+#mainContent h1{
+    border: 1px solid var(--secondary);
+    background-color: white;
+}
+#mainContent h2{
+    color: var(--secondary);
+}
 #mainContent{
+    margin-top: -20px;
     text-align: center;
 }
+
 .selectAnItem{
     border: 1px solid black;
     background-color: red;
@@ -51,8 +60,8 @@ img.logo{ /*element.clssName*/
     align-items: center;
 }
 .headOfKitchenLink{
-    border: 1px solid orange;
-    background-color: orange;
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
     color: red;
     font-size: large;
     padding: 10px;
@@ -113,12 +122,12 @@ img.logo{ /*element.clssName*/
     padding: 10px;
 }
 .sideBar i{
-    color: crimson;
+    color: var(--secondary);
 }
 .sideBar input{
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--bg);
     background-color: var(--secondary);
-    color: var(--bg);
+    color: var(--tertiary);
     cursor: pointer;
     font-size: large;
     width: 30px;
@@ -126,7 +135,7 @@ img.logo{ /*element.clssName*/
     margin: 2px;
 }
 .sideBar input:hover{
-    color: red;
+    color: rgb(0, 0, 0);
     background-color: white;
 }
 .attention_{
@@ -134,8 +143,8 @@ img.logo{ /*element.clssName*/
     text-align: left;
 }
 .attention_ h3{
-    color: red;
-    text-shadow: .5px 1px black;
+    color: white;
+    text-shadow: 1px 2px black;
 }
 .attention_ h4{
     margin-left: 6px;
@@ -161,11 +170,11 @@ img.logo{ /*element.clssName*/
 }
 /*MOBILE ONLY STYLING*/
 @media screen and (max-width:840px) {
-    hr{
-        display: none;
-    }
     .sideBar{
         width: 40vw;
+    }
+    hr{
+        color: blue;
     }
 }
 /*DESKTOP ONLY STYLING*/

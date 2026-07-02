@@ -174,7 +174,7 @@ function Main(){
                 <p>PLEASE SELECT AT LEAST ONE ITEM TO ORDER</p>
             </div>
             {/*<img className='logo' src='/IMAGES/BattleAxeCafeLogo.png'></img>*/}
-            <h1>BIRTHING A NAITON COFFEE SHOP</h1>
+            <h1>BIRTHING A NATION COFFEE SHOP</h1>
             <hr />
             <br />
             <div className='sideBar'>
@@ -198,8 +198,6 @@ function Main(){
                     <option value="Brother">Brother</option>
                     <option value="Sister">Sister</option>
                 </select>
-                <br/>
-                <br/>
                 {/*evaluate the input tag 
                 <label htmlFor="name"><strong>Enter your full name:</strong></label> 
                 */}
@@ -212,7 +210,7 @@ function Main(){
                 />
                 <br/>
                 {/*Meals*/}
-                <h4>MAKE YOUR COFFEE CHOICE&#40;S&#41;</h4>
+                <h2>PLEASE, SELECT YOUR COFFEE CHOICE&#40;S&#41; BELOW</h2>
                 {/*
                 <span className='allergyWarning'>
                     <strong>ALLERGIES: Please let the kitchen team know of any allergies that you may have to prevent issues.</strong>
@@ -226,24 +224,24 @@ function Main(){
                     <Items 
                         image={"/IMAGES/caramel_frappe.png"}
                         imageAlt={''}
-                        order_name={"BUFFALO CHICKEN PIZZA: Includes a Drink"}
-                        price={'$10'}
+                        order_name={"ICED CARAMEL MACCHIATO"}
+                        price={'$5'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     <Items 
                         image={"/IMAGES/strawberry_frappe.png"}
                         imageAlt={''}
-                        order_name={"PEPPERONI PIZZA: Includes a Drink"}
-                        price={'$9'}
+                        order_name={"STRAWBERRY FRAPPE"}
+                        price={'$5'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
                     <Items 
                         image={"/IMAGES/mocha_frappe.png"}
                         imageAlt={''}
-                        order_name={"CHEESE PIZZA: Includes a Drink"}
-                        price={'$7'}
+                        order_name={"MOCHA FRAPPE"}
+                        price={'$5'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />

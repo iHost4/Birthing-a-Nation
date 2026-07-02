@@ -78,29 +78,14 @@ function HeadOfKitchen() {
               setItemsByOrder((prev) => ({...prev, [orderNo]: data}));
             }
         }
-        /*
-        //CHECK IF PAID WITH PAYPAL
-        if(!(orderNo in paidPaypal)){
-          const { data,error } = await supabase
-            .from('order')
-            .select('*')
-            .eq('order_no' , orderNo)
-            .not('paid_with_paypal' , 'is', false)
- 
-          if(error){
-            console.log('Cannot verify PayPal payment for ${orderNo} ', error.message)
-          }else{
-            setPaidPaypal((prev) => ({...prev, [orderNo]: data && data.length > 0}))
-          }
-        }
-        */
         setExpandedOrders((prev) => ({...prev, [orderNo]: true}));
       }
     };
   return(
     <>
-      <img className='hoklogo' src='/IMAGES/BattleAxeCafeLogo.png'></img>
+      {/*<img className='hoklogo' src='/IMAGES/BattleAxeCafeLogo.png'></img>
      <hr className="hr" />
+     */}
       {formVisible && (
         <form name="hokForm" className="hokForm" onSubmit={handleSubmit}>
           <h2>PLEASE ENTER THE PASSWORD</h2>
@@ -110,7 +95,7 @@ function HeadOfKitchen() {
       )}
       {!formVisible && (
       <div id="viewOrder"> 
-        <h3>THIS WEEKS ORDERS</h3>
+        <h2>THIS WEEKS ORDERS</h2>
         <table className="orderTable">
           <thead>
             <tr>

@@ -12,7 +12,7 @@ function Items({image, imageAlt, order_name, price, quantity=[], onChange}){
             </div>
             <div className='detailOption'>
                 <p className='orderName'>{order_name}</p>
-
+        
                 <div className='priceQuantity'>
                     <p>{price}</p>
                     

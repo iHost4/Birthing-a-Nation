@@ -10,9 +10,12 @@
     border: 1px solid rgba(255, 255, 255, 0.959);
     background-color: rgba(255, 255, 255, 0.959);
 }
+#submittedPopUp h2{
+    color: var(--bg);
+}
 .closeButton{
-    border: 1px solid brown;
-    background-color: brown;
-    color: white;
+    border: 1px solid var(--bg);
+    background-color: var(--bg);
+    color: var(--secondary);
     width: 10em;
 }

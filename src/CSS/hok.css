@@ -1,12 +1,12 @@
 img.hoklogo{
     width: 25%;
 } 
-.hr{
-    width: 80%;
-    color: #5A2917;
-}
-h3{
+h2{
     text-decoration: underline;
+    color: white;
+}
+.hokForm h2{
+    color: black;
 }
 .hokForm{
     border: 1px solid white;
@@ -23,17 +23,17 @@ h3{
 }
 .orderTable{
     margin: auto;
-    border: 1px dotted #BA9D55;
+    border: 1px dotted var(--bg);
     background-color:white;
     padding: 5px;
 }
 .orderTable th, .orderTable td{
-    border: 1px solid #BA9D55;
+    border: 0.5px solid var(--bg);
     padding: 5px;
 }
 .viewOrdersButton{
     border: 1px solid rgba(0, 0, 255, 0);
-    /*background-color: #BA9D55;*/
+    background-color: white;
 }
 .item{
     list-style: none;
@@ -54,5 +54,9 @@ h3{
     }
     hr{
         display: none;
+    }
+    .viewOrdersButton{
+        border: 1px solid rgba(0, 0, 255, 0);
+        background-color: white;
     }
 }

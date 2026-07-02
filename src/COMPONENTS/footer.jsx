@@ -18,7 +18,7 @@ function Footer() {
             </div>
             <br />
             <hr />
-            <p>Created and Hosted by Code-de-Sac, LLC. &copy; 2025 </p>
+            <p>Created and Hosted by Code-de-Sac, LLC. &copy; 2026ds </p>
             <p>ALL RIGHTS RESERVED</p>
         </footer>
     );

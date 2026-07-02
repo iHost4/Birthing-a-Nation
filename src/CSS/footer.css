@@ -17,9 +17,10 @@ footer hr{
     justify-content: space-evenly;
 }
 .hokButton{
-    border: 1px solid #BA9D55;
-    background-color: #BA9D55;
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
     border-radius: 10px;
+    box-shadow: 1px 4px var(--bg);
     padding: 5px;
 }.homeButton{
     border: 1px solid white;
