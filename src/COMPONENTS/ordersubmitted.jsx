@@ -1,7 +1,7 @@
-import { supabase } from "../API/supabaseClient";
-import { useState } from "react";
+//import { supabase } from "../API/supabaseClient";
+//import { useState } from "react";
 import '../CSS/ordersubmitted.css'
-import PayPalCheckout from "../API/paypalAPI";
+//import PayPalCheckout from "../API/paypalAPI";
 
 function OrderSubmitted({orderNo, quantity, onClose}){
     if(!orderNo) return null

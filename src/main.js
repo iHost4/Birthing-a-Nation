@@ -27,7 +27,7 @@ function Main(){
     const [noMoreOrders, setNoMoreOrders] = useState(false);
     useEffect(() => {
         const checkSabbath = () => {
-            const now = new Date();
+           // const now = new Date();
 
             const nowUTC = new Date();
             const nowCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
@@ -38,7 +38,8 @@ function Main(){
             const minute = nowCST.getMinutes();
 
             //check if the current time is the Sabbath: Friday 6pm - Satuday 6pm
-            if(day === 5 && hour >= 19 || day === 6 && hour < 19){ //CHANGE ACCORDING TO DLS
+            if(day === 5 && hour >= 19 
+                || day === 6 && hour < 19){
                 setIsSabbath(true);
             }else{
                 setIsSabbath(false);
@@ -72,7 +73,7 @@ function Main(){
     //THE FOLLOWING CODE ENSURES AT LEAST ONE ITEM HAS A QUANTITY GREATER THAN 0
     const handleOrderChange = (order_name, quantity, price) => {
         setOrders(prev => {
-            const updated = prev.filter(item => item.order_name != order_name)
+            const updated = prev.filter(item => item.order_name !== order_name)
             if(quantity !== '0'){
                 updated.push({
                     order_name,
