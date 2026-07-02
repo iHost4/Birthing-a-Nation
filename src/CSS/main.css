@@ -20,6 +20,19 @@ body{
 img.logo{ /*element.clssName*/
     width: 20%;
 }
+#genderRank{
+    border: 1px dotted blue;
+    border-radius: 7px;
+    padding: 4px;
+}
+#userForm input{
+    border: 1px dotted blue;
+    border-radius: 7px;
+    padding: 5px;
+}
+#genderRank{
+    margin: 10px;
+}
 #mainContent hr{
     color: var(--secondary);
 }

@@ -43,8 +43,8 @@ function Main(){
             }else{
                 setIsSabbath(false);
             }
-            //check if the current time is 12pm Friday (this is when orders are no longer being received)
-            if(day === 5 && hour >= 12){
+            //check if the current time is 5pm Friday (this is when orders are no longer being received)
+            if(day === 5 && hour >= 15){
                 setNoMoreOrders(true);
             }else{
                 setNoMoreOrders(false);
@@ -183,7 +183,7 @@ function Main(){
                     <h3>ATTENTION:</h3>
                 </div>
                 
-                <h3>Kitchen Closes: <i>Friday @12pm CST!</i></h3>
+                <h3>pre-orders end: <i>Friday @5pm CST!</i></h3>
             </div>
             {/*START OF FORM*/}
             <form id='userForm' onSubmit={handleSubmit}>

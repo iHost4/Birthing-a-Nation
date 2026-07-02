@@ -13,7 +13,7 @@ function HeadOfKitchen() {
     //CHECKS IF THE HOK PASSWORD IS SET
     useEffect(() =>{
       const storedHokPassword = sessionStorage.getItem('hokPassword');
-      if(storedHokPassword === 'h4h'){
+      if(storedHokPassword === 'b1rth'){
         setFormVisible(false)
         fetchOrders()//FETCH THE ORDERS if PASSWORD CREDENTIALS IS MET
       }
@@ -24,7 +24,7 @@ function HeadOfKitchen() {
       const { data, error } = await supabase
         .from("order")
         .select(`order_no, customer_id, customer(rank, name), paid_with_paypal`)
-        .gt("order_date", "2026-06-29")//MUST UPDATE WEEKLY: year-month-day
+        .gt("order_date", "2026-07-01")//MUST UPDATE WEEKLY: year-month-day
 
       if(error){
         console.error("Error fetching orders:", error.message)
@@ -47,7 +47,7 @@ function HeadOfKitchen() {
       e.preventDefault(); // prevent page reload
       const hokPassword = e.target.hokPassword.value;
 
-      if (hokPassword === 'h4h') {    //store user session
+      if (hokPassword === 'b1rth') {    //store user session
         sessionStorage.setItem('hokPassword', hokPassword);
         setFormVisible(false)
         fetchOrders();

@@ -14,11 +14,11 @@ function Footer() {
         <footer>
             <div id="footerButtons">
                 <button className='homeButton' onClick={handleBack}> &#8592; HOME</button>
-                <button className='hokButton' onClick={handleRedirect}>HEAD OF KITCHEN</button>
+                <button className='hokButton' onClick={handleRedirect}>ADMIN ONLY</button>
             </div>
             <br />
             <hr />
-            <p>Created and Hosted by Code-de-Sac, LLC. &copy; 2026ds </p>
+            <p>Created and Hosted by Code-de-Sac, LLC. &copy; 2026 </p>
             <p>ALL RIGHTS RESERVED</p>
         </footer>
     );
