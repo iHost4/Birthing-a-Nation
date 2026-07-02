@@ -213,7 +213,7 @@ function Main(){
                 />
                 <br/>
                 {/*Meals*/}
-                <h2>PLEASE, SELECT YOUR COFFEE CHOICE&#40;S&#41; BELOW</h2>
+                <h2>PLEASE SELECT YOUR COFFEE CHOICE&#40;S&#41; BELOW</h2>
                 {/*
                 <span className='allergyWarning'>
                     <strong>ALLERGIES: Please let the kitchen team know of any allergies that you may have to prevent issues.</strong>
