@@ -27,7 +27,7 @@ function Main(){
     const [noMoreOrders, setNoMoreOrders] = useState(false);
     useEffect(() => {
         const checkSabbath = () => {
-           // const now = new Date();
+           // const now = new Date(); NOT USED
 
             const nowUTC = new Date();
             const nowCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
@@ -35,11 +35,13 @@ function Main(){
             //gets the day hour and minute
             const day = nowCST.getDay();
             const hour = nowCST.getHours();
-            const minute = nowCST.getMinutes();
+            //const minute = nowCST.getMinutes(); NOT USED
 
             //check if the current time is the Sabbath: Friday 6pm - Satuday 6pm
-            if(day === 5 && hour >= 19 
-                || day === 6 && hour < 19){
+            if(
+                (day === 5 && hour >= 19) || 
+                (day === 6 && hour < 19)
+            ){ 
                 setIsSabbath(true);
             }else{
                 setIsSabbath(false);
