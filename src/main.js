@@ -173,8 +173,8 @@ function Main(){
             <div className='selectAnItem'>
                 <p>PLEASE SELECT AT LEAST ONE ITEM TO ORDER</p>
             </div>
-            <img className='logo' src='/IMAGES/BattleAxeCafeLogo.png'></img>
-            <br />
+            {/*<img className='logo' src='/IMAGES/BattleAxeCafeLogo.png'></img>*/}
+            <h1>BIRTHING A NAITON COFFEE SHOP</h1>
             <hr />
             <br />
             <div className='sideBar'>
@@ -212,17 +212,19 @@ function Main(){
                 />
                 <br/>
                 {/*Meals*/}
-                <h4>Select Your Meal&#40;s&#41;</h4>
+                <h4>MAKE YOUR COFFEE CHOICE&#40;S&#41;</h4>
+                {/*
                 <span className='allergyWarning'>
                     <strong>ALLERGIES: Please let the kitchen team know of any allergies that you may have to prevent issues.</strong>
                     <br />
                     <strong>INQUIRE OF THE INGREDIENTS</strong>
                 </span>
+                */}
                 <br />
                 <br />
                 <div className='meals'>
                     <Items 
-                        image={"/IMAGES/buffalo_chicken_pizza.jpg"}
+                        image={"/IMAGES/caramel_frappe.png"}
                         imageAlt={''}
                         order_name={"BUFFALO CHICKEN PIZZA: Includes a Drink"}
                         price={'$10'}
@@ -230,7 +232,7 @@ function Main(){
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/pepperoni_pizza.jpg"}
+                        image={"/IMAGES/strawberry_frappe.png"}
                         imageAlt={''}
                         order_name={"PEPPERONI PIZZA: Includes a Drink"}
                         price={'$9'}
@@ -238,18 +240,10 @@ function Main(){
                         onChange={handleOrderChange}
                     />
                     <Items 
-                        image={"/IMAGES/cheese_pizza.jpg"}
+                        image={"/IMAGES/mocha_frappe.png"}
                         imageAlt={''}
                         order_name={"CHEESE PIZZA: Includes a Drink"}
                         price={'$7'}
-                        quantity={['0','1','2','3','4','5','6']}
-                        onChange={handleOrderChange}
-                    />
-                    <Items 
-                        image={"/IMAGES/hotdogs.jpg"}
-                        imageAlt={''}
-                        order_name={"HOT DOG: Includes a Drink"}
-                        price={'$6'}
                         quantity={['0','1','2','3','4','5','6']}
                         onChange={handleOrderChange}
                     />
