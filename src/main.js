@@ -50,7 +50,7 @@ function Main(){
             if(day === 5 && hour >= 20){
                 setNoMoreOrders(true);
             }else{
-                setNoMoreOrders(false);
+                setNoMoreOrders(true);
             }
         };
 
