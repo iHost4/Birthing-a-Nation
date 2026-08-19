@@ -20,11 +20,28 @@ function HeadOfKitchen() {
     }, []);
     //END CHECKS IF THE HOK PASSWPRD IS SET
     //START FETCHORDER
+    
     const fetchOrders = async (e) =>{
+      //CHECK THE DATE TO CHANGE WHAT IS REFLECTED ON THE DATABASE
+    const nowUTC = new Date();
+    const currentCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
+
+    const year = currentCST.getFullYear();
+    const month = currentCST.getMonth()+1; 
+    const dayNow = currentCST.getDate(); //gets the number of the day
+    const today = currentCST.getDay(); //1 = monday... 7=sunday (I cannot change this)
+    const theHour = currentCST.getHours(); //24hr format
+
+    const saturdayHokChange = `${year}-${month}-${dayNow}`;
+
+    //checking to make sure the date is populating correctly
+    console.log("Today's date is "+saturdayHokChange)
+    
+    //CHECK TO SEE IF THE DAY IS SATURDAY
       const { data, error } = await supabase
         .from("order")
         .select(`order_no, customer_id, customer(rank, name), paid_with_paypal`)
-        .gt("order_date", "2026-07-19")//MUST UPDATE WEEKLY: year-month-day
+        .gt("order_date", "2026-08-19")//MUST UPDATE WEEKLY: year-month-day
 
       if(error){
         console.error("Error fetching orders:", error.message)
