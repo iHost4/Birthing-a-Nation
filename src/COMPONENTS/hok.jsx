@@ -23,13 +23,11 @@ function HeadOfKitchen() {
     
     const fetchOrders = async (e) =>{
     //START CHECK IF IT IS SUNDAY (TO CHANGE THE DATE AUTOMATICALLY)
-    const now = new Date();
 
     const nowUTC = new Date();
     const nowCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
 
     const dayofWeek = nowCST.getDay(); //gets the day of the week
-    const date = nowCST.getDate(); //gets the number day
     
     const sunday = new Date(nowCST); //finds most recent Sunday
     sunday.setDate(nowCST.getDate() - dayofWeek);
