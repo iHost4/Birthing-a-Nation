@@ -22,26 +22,34 @@ function HeadOfKitchen() {
     //START FETCHORDER
     
     const fetchOrders = async (e) =>{
-      //CHECK THE DATE TO CHANGE WHAT IS REFLECTED ON THE DATABASE
+    //START CHECK IF IT IS SUNDAY (TO CHANGE THE DATE AUTOMATICALLY)
+    const now = new Date();
+
     const nowUTC = new Date();
-    const currentCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
+    const nowCST = new Date(nowUTC.toLocaleString('en-US', { timezone:"America/Chicago" }));
 
-    const year = currentCST.getFullYear();
-    const month = currentCST.getMonth()+1; 
-    const dayNow = currentCST.getDate(); //gets the number of the day
-    const today = currentCST.getDay(); //1 = monday... 7=sunday (I cannot change this)
-    const theHour = currentCST.getHours(); //24hr format
+    const dayofWeek = nowCST.getDay(); //gets the day of the week
+    const date = nowCST.getDate(); //gets the number day
+    
+    const sunday = new Date(nowCST); //finds most recent Sunday
+    sunday.setDate(nowCST.getDate() - dayofWeek);
 
-    const saturdayHokChange = `${year}-${month}-${dayNow}`;
+    //dat format
+    const orderDisplayDate = [
+      sunday.getFullYear(),
+      String(sunday.getMonth() +1).padStart(2,'0'),
+      String(sunday.getDate()).padStart(2,'0')
+    ].join('-');
+    //check code
+    console.log("Order Date:",orderDisplayDate);
+    //END CHECK IF IT IS SUNDAY (TO CHANGE THE DATE AUTOMATICALLY)
 
-    //checking to make sure the date is populating correctly
-    console.log("Today's date is "+saturdayHokChange)
     
     //CHECK TO SEE IF THE DAY IS SATURDAY
       const { data, error } = await supabase
         .from("order")
         .select(`order_no, customer_id, customer(rank, name), paid_with_paypal`)
-        .gt("order_date", "2026-08-19")//MUST UPDATE WEEKLY: year-month-day
+        .gt("order_date", orderDisplayDate)//MUST UPDATE WEEKLY: year-month-day
 
       if(error){
         console.error("Error fetching orders:", error.message)

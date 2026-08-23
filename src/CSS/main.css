@@ -92,12 +92,15 @@ img.logo{ /*element.clssName*/
 #sabbath{
     border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.98);
-    color: yellow;
+    color: var(--bg);
     position: sticky;
     bottom: 0;
     height: 100vh;
     align-content: center;
     padding: 4px;
+}
+#sabbath h2{
+    color: var(--tertiary);
 }
 #sabbath p{
     color: white;

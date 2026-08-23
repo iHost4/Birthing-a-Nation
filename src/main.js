@@ -40,7 +40,7 @@ function Main(){
             //check if the current time is the Sabbath: Friday 6pm - Satuday 6pm
             if(
                 (day === 5 && hour >= 19) || 
-                (day === 6 && hour < 19)
+                (day === 6 && hour < 23)
             ){ 
                 setIsSabbath(true);
             }else{
