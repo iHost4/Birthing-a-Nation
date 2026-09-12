@@ -42,7 +42,7 @@ function Main(){
                 (day === 5 && hour >= 19) || 
                 (day === 6 && hour < 23)
             ){ 
-                setIsSabbath(false);
+                setIsSabbath(true);
             }else{
                 setIsSabbath(false);
             }
